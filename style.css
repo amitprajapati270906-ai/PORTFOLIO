@@ -20,6 +20,9 @@ a {
     color: inherit;
 }
 
+
+/* ================= NAVBAR ================= */
+
 .navbar {
     height: 70px;
     padding: 0 7%;
@@ -63,6 +66,9 @@ nav a:hover {
     color: white;
     font-size: 25px;
 }
+
+
+/* ================= HERO ================= */
 
 .hero {
     min-height: 90vh;
@@ -148,6 +154,9 @@ nav a:hover {
     color: #9eff00;
 }
 
+
+/* ================= PROFILE PHOTO ================= */
+
 .hero-image {
     height: 400px;
     display: flex;
@@ -156,27 +165,69 @@ nav a:hover {
     position: relative;
 }
 
+
+/* Outer circle */
+
 .circle {
-    width: 300px;
-    height: 300px;
-    border: 1px solid #333;
+    width: 320px;
+    height: 320px;
+    border: 2px solid #333;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: #101318;
 }
+
+
+/* Profile image */
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+
+/* Green glow around photo */
+
+.circle::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    box-shadow: 0 0 25px rgba(158, 255, 0, 0.15);
+    pointer-events: none;
+}
+
+
+/* AI badge */
 
 .ai {
     position: absolute;
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
+    right: 45px;
+    bottom: 25px;
     border-radius: 50%;
     background: #101318;
-    border: 1px solid #555;
+    border: 2px solid #9eff00;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #9eff00;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
+    box-shadow: 0 0 20px rgba(158, 255, 0, 0.15);
 }
+
+
+/* Floating skill boxes */
 
 .float {
     position: absolute;
@@ -186,22 +237,26 @@ nav a:hover {
     border-radius: 7px;
     font-size: 11px;
     color: #aaa;
+    z-index: 2;
 }
 
 .one {
-    top: 50px;
-    right: 20px;
+    top: 35px;
+    right: 5px;
 }
 
 .two {
-    bottom: 50px;
-    left: 10px;
+    bottom: 35px;
+    left: 5px;
 }
 
 .three {
     top: 160px;
-    left: 10px;
+    left: 0;
 }
+
+
+/* ================= SECTION ================= */
 
 .section {
     max-width: 1200px;
@@ -231,6 +286,9 @@ nav a:hover {
 .contact h2 span {
     color: #9eff00;
 }
+
+
+/* ================= ABOUT ================= */
 
 .about {
     display: grid;
@@ -266,6 +324,9 @@ nav a:hover {
     color: #777;
 }
 
+
+/* ================= SKILLS ================= */
+
 .skills {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -293,6 +354,9 @@ nav a:hover {
     font-size: 12px;
     margin-top: 8px;
 }
+
+
+/* ================= PROJECTS ================= */
 
 .projects {
     display: grid;
@@ -357,6 +421,9 @@ nav a:hover {
     font-size: 12px;
 }
 
+
+/* ================= CERTIFICATES ================= */
+
 .certificates {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -390,6 +457,9 @@ nav a:hover {
     font-size: 11px;
 }
 
+
+/* ================= EDUCATION ================= */
+
 .timeline {
     border-left: 1px solid #333;
 }
@@ -416,6 +486,9 @@ nav a:hover {
     color: #888;
     font-size: 13px;
 }
+
+
+/* ================= CONTACT ================= */
 
 .contact {
     text-align: center;
@@ -455,6 +528,9 @@ nav a:hover {
     font-size: 12px;
 }
 
+
+/* ================= FOOTER ================= */
+
 footer {
     border-top: 1px solid #222;
     padding: 25px 7%;
@@ -467,6 +543,9 @@ footer {
 footer a:hover {
     color: #9eff00;
 }
+
+
+/* ================= MOBILE ================= */
 
 @media(max-width: 800px) {
 
@@ -494,8 +573,39 @@ footer a:hover {
         font-size: 43px;
     }
 
+    /* Mobile par photo hide nahi hogi */
     .hero-image {
-        display: none;
+        display: flex;
+        height: 350px;
+        margin-top: 20px;
+    }
+
+    .circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .ai {
+        width: 80px;
+        height: 80px;
+        right: 25px;
+        bottom: 20px;
+        font-size: 24px;
+    }
+
+    .one {
+        top: 20px;
+        right: 0;
+    }
+
+    .two {
+        bottom: 20px;
+        left: 0;
+    }
+
+    .three {
+        top: 130px;
+        left: 0;
     }
 
     .project.big {
@@ -505,6 +615,11 @@ footer a:hover {
     .heading h2,
     .contact h2 {
         font-size: 38px;
+    }
+
+    .email {
+        font-size: 18px;
+        word-break: break-word;
     }
 
     footer {
