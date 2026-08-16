@@ -14,7 +14,6 @@ I am interested in Machine Learning, Python, Data Analysis, SQL, Web Development
 - Python
 - Java
 - C
-- C++
 - Machine Learning
 - NLP
 - TF-IDF
@@ -27,7 +26,6 @@ I am interested in Machine Learning, Python, Data Analysis, SQL, Web Development
 - CSS
 - JavaScript
 - Spring Boot
-- Git
 - GitHub
 
 ## Projects
