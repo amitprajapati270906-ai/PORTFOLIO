@@ -26,6 +26,7 @@ I am interested in Machine Learning, Python, Data Analysis, SQL, Web Development
 - CSS
 - JavaScript
 - Spring Boot
+- Git
 - GitHub
 
 ## Projects
